@@ -37,13 +37,13 @@ int[,] FillsTheMatrix(int[,] array){
     while(number<=(array.GetLength(0)*array.GetLength(1))){
         array[i,j] = number;
         number++;
-        if(i<=j+1 && i+j<array.GetLength(1)-1){
+        if(i<=j+1 && i+j<array.GetLength(0)-1){
             j++;
         }
-        else if(i<j && i+j>=array.GetLength(0)-1){
+        else if(i<j && i+j>=array.GetLength(1)-1){
             i++;
         }
-        else if(i>=j && i+j>array.GetLength(1)-1){
+        else if(i+1>=j && i+j>array.GetLength(0)-1){
             j--;
         }
         else{
@@ -54,6 +54,6 @@ int[,] FillsTheMatrix(int[,] array){
 
 }
 
-int[,] matrix = CreateMatrix(7,7);
+int[,] matrix = CreateMatrix(4,4);
 int[,] newMatrix = FillsTheMatrix(matrix);
 PrindMatrix(newMatrix);
