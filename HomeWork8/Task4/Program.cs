@@ -42,7 +42,7 @@ void PrindMatrix(int[,] array){
     int col = array.GetLength(1);
     for(int i = 0; i < row; i++){
         for (int j = 0; j < col; j++){
-            Console.Write($"{array[i, j]}\t");
+            Console.Write($"{array[i, j]}({i}, {j})\t");
         }
         Console.WriteLine("");
     }
